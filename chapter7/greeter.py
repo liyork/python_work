@@ -1,9 +1,6 @@
-# 函数
-def greet_user(username):
-    # 文档字符串
-    """显示问候语"""
-    print(f"hello, {username.title()}!")
-
-
 if __name__ == '__main__':
-    greet_user('jess')
+    prompt = "if you tell us hwo you are, we can personalize the messages you see."
+    prompt += "\n what is your first name? "
+
+    name = input(prompt)
+    print(f"\nhello, {name}!")

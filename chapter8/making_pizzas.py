@@ -1,5 +1,5 @@
 # import pizza  # 导入模块的全部
-import pizza as p  # 用别名
+from chapter8 import pizza as p
 
 if __name__ == '__main__':
     p.make_pizza(16, 'pepperni')
