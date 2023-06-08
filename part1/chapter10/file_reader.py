@@ -10,7 +10,7 @@ if __name__ == '__main__':
     print(contents.rstrip())
 
     # 绝对路径
-    with open('C:/Users/1661815/PycharmProjects/python_work/text_files/a.txt') as file_object:
+    with open('/part1/text_files/a.txt') as file_object:
         contents = file_object.read()
     print(contents.rstrip())
 
