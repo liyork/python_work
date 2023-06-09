@@ -3,10 +3,13 @@ from pygame.sprite import Group
 
 from ship import Ship
 
+"""分数板"""
+
 
 class Scoreboard:
     def __init__(self, ai_game):
         self.ai_game = ai_game
+
         self.screen = ai_game.screen
         self.screen_rect = self.screen.get_rect()
         self.settings = ai_game.settings
@@ -59,7 +62,7 @@ class Scoreboard:
         self.level_rect.top = self.score_rect.bottom + 10
 
     def pre_ships(self):
-        self.ships = Group()
+        self.ships = Group()  # 组内可添加sprite
         for ship_number in range(self.stats.ships_left):
             ship = Ship(self.ai_game)
             ship.rect.x = 10 + ship_number * ship.rect.width

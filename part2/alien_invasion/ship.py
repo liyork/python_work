@@ -1,6 +1,8 @@
 import pygame
 from pygame.sprite import Sprite
 
+"""飞船"""
+
 
 class Ship(Sprite):
     def __init__(self, ai_game):  # ai_game is AlienInvasion

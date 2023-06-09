@@ -1,3 +1,6 @@
+"""游戏统计信息"""
+
+
 class GameStats:
     def __init__(self, ai_game):
         self.settings = ai_game.settings
@@ -8,6 +11,7 @@ class GameStats:
         # 最高得分
         self.high_score = 0
 
+    # 动态的，可重置的属性
     def reset_stats(self):
         # 剩余飞船
         self.ships_left = self.settings.ship_limit

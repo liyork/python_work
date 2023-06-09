@@ -1,6 +1,8 @@
 import pygame
 from pygame.sprite import Sprite
 
+"""子弹"""
+
 
 class Bullet(Sprite):  # 通过使用sprite，可将游戏中相关的元素编组，进而同时操作编组中的所有元素
     def __init__(self, ai_game):

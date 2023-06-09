@@ -12,7 +12,7 @@ from ship import Ship
 from bullet import Bullet
 from alien import Alien
 
-"""启动类"""
+"""游戏主程序"""
 
 
 class AlienInvasion:
@@ -48,7 +48,7 @@ class AlienInvasion:
 
     def run_game(self):
         while True:
-            # print(11111111) 自己不断执行
+            # print(11111111) 不断执行，一个死循环
             self._check_events()  # 处理按键事件
 
             if self.stats.game_active:

@@ -1,3 +1,6 @@
+"""游戏相关设定"""
+
+
 class Settings:
     def __init__(self):
         # 屏幕设置

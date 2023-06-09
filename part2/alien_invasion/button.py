@@ -1,5 +1,7 @@
 import pygame.font  # 能将文本渲染到屏幕上
 
+""""按钮"""
+
 
 class Button:
     def __init__(self, ai_game, msg):
