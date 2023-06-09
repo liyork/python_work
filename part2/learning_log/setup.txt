@@ -1,0 +1,68 @@
+cd C:\Users\1661815\PycharmProjects\python_work\part2\learning_log
+
+安装模块virtualenv
+python -m pip install --user virtualenv
+创建虚拟环境
+python -m virtualenv ll_env
+激活虚拟环境
+ll_env\Scripts\activate
+--停止使用虚拟环境deactivate
+
+安装Django
+pip install django
+新建一个项目learning_log
+django-admin startproject learning_log .
+dir
+dir learning_log
+
+创建供Django使用的数据库
+python manage.py migrate
+启动项目
+python manage.py runserver
+访问http://127.0.0.1:8000/
+
+另开窗口，创建应用应用程序，让Django搭建创建应用程序所需的基础设施
+python manage.py startapp learning_logs
+修改相关配置后
+makemigrations让Django确定该如何修改数据库，使其能存储与前面定义的新模型相关联的数据，得到了0001_initial.py迁移文件
+python manage.py makemigrations learning_logs
+应用这种迁移，让Django替我们修改数据库
+python manage.py migrate
+
+在Django中创建超级管理用户
+python manage.py createsuperuser
+admin
+admin@163.com
+admin
+
+http://127.0.0.1:8000/admin/
+输入:admin/admin
+页面创建Topic
+
+修改entry后
+开始迁移数据库为新模型Entry
+python manage.py makemigrations learning_logs
+python manage.py migrate
+页面创建Entry
+
+交互查看，启动python解释器
+python manage.py shell
+输入
+from learning_logs.models import Topic
+Topic.objects.all()
+
+topics = Topic.objects.all()
+for topic in topics:
+    print(topic.id, topic)
+
+t = Topic.objects.get(id=1)
+t.text
+t.date_add
+模型小写_set得到关联对象集合
+t.entry_set.all()
+退出shell
+ctrl+z+enter
+
+
+
+
