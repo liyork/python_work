@@ -1,0 +1,6 @@
+cd C:\Users\1661815\goldenversions\python-3.9.5-embed-amd64
+
+python -m pip install --user pygame
+让python运行pip模块，将pygame包添加到当前用户的python安装中
+
+工程中import时报错，稍等一下就行了
