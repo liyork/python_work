@@ -1,0 +1,3 @@
+让python运行模块pip，将matplotlib包添加到当前用户的python安装中
+python -m pip install --user matplotlib
+
