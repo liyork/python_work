@@ -1,0 +1,8 @@
+<p>
+    <!--模板标签, 与learning_logs/urls.py中url模式匹配-->
+    <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
+    <a href="{% url 'learning_logs:topics' %}">Topics</a>
+</p>
+
+<!--块标签-->
+{% block content %}{% endblock content %}

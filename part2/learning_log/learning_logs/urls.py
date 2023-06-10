@@ -14,11 +14,23 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+
+from django.urls import path
+
+from . import views
+
+app_name = 'learning_logs'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    # 首页
-    path('', include('learning_logs.urls'))
+    # 路由地址(''与基础路由匹配)，要调用view中那个函数，将这个url模式的名称指定为index
+    path('', views.index, name='index'),
+
+    # topic
+    path('topics/', views.topics, name='topics'),
+    # 特定主题
+    path('topics/<int:topic_id>', views.topic, name='topic'),
+    # create topic
+    path('new_topic/', views.new_topic, name='new_topic'),
+    # 添加新条目
+    path('new_entry/<int:topic_id>/', views.new_entry, name='new_entry'),
 ]

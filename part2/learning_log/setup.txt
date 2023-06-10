@@ -63,6 +63,9 @@ t.entry_set.all()
 退出shell
 ctrl+z+enter
 
-
+创建完页面
+指定path，修改view，修改模板
+，重新runserver
+http://127.0.0.1:8000/
 
 
